@@ -1,0 +1,2 @@
+- added showNewFragments method that updates UI with new fragments from a passed list.
+- removed showMainLayout and showLoginLayout methods.

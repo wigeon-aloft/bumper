@@ -1,0 +1,219 @@
+{
+    "response": {
+        "general": {
+            "500": {
+                "success": false,
+                "status_code": 500,
+                "message": "Something went wrong server-side whilst processing your request. See 'error' for more details.",
+                "error": ""
+            }
+        },
+        "authentication": {
+            "login_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Login successful.",
+                "token": "",
+                "user": {}
+            },
+            "login_username_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Login failed. Username must be provided."
+            },
+            "login_password_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Login failed. Password must be provided."
+            },
+            "login_credentials_invalid": {
+                "success": false,
+                "status_code": 401,
+                "message": "Login failed. Either the username or password that were provided are incorrect."
+            },
+            "logout_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Logout successful. All active tokens disabled."
+            },
+            "logout_userid_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Logout failed. No user ID was provided."
+            },
+            "token_valid": {
+                "success": true,
+                "status_code": 200,
+                "message": "Token validation successful."
+            },
+            "token_none": {
+                "success": false,
+                "status_code": 401,
+                "message": "Authentication failed. No token was provided."
+            },
+            "token_invalid": {
+                "success": false,
+                "status_code": 401,
+                "message": "Authentication failed. The token provided was invalid."
+            },
+            "token_expired": {
+                "success": false,
+                "status_code": 401,
+                "message": "Authentication failed. The token provided is expired. Please log in again."
+            }
+        },
+        "vote": {
+            "success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Successfully added vote.",
+                "user": 0,
+                "film": 0,
+                "vote": 0
+            },
+            "parameter_invalid": {
+                "success": false,
+                "status_code": 400,
+                "message": "Create vote failed. One or more parameters were incorrect or not provided. Please provide: film ID, user ID, and vote result."
+            },
+            "error_database": {
+                "success": false,
+                "status_code": 500,
+                "message": "Create vote failed. Something went wrong server-side whilst trying to add a vote to the database.",
+                "user": 0,
+                "film": 0,
+                "vote": 0
+            }
+        },
+        "film": {
+            "success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Get film successful.",
+                "film": {}
+            },
+            "id_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "A film ID must be provided."
+            },
+            "not_found": {
+                "success": false,
+                "status_code": 404,
+                "message": "No film was found matching the film ID provided."
+            }
+        },
+        "user": {
+            "create_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Create user successful.",
+                "token": "",
+                "user": {}
+            },
+            "get_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "User profile information retrieval successful."
+            },
+            "username_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Create user failed. A username must be provided."
+            },
+            "username_taken": {
+                "success": false,
+                "status_code": 409,
+                "message": "Create user failed. The requested username is already in use."
+            },
+            "password_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Create user failed. A password must be provided."
+            }
+        },
+        "usersearch": {
+            "success": {
+                "success": true,
+                "status_code": 200,
+                "message": "User search successful.",
+                "search": "",
+                "result_count": 0,
+                "results" : []
+            }
+        },
+        "relationship": {
+            "create_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Create relationship successful.",
+                "relationship": {
+                    "requester": 0,
+                    "recipient": 0,
+                    "status": ""
+                }
+            },
+            "already_exists": {
+                "success": false,
+                "status_code": 409,
+                "message": "Create relationship failed. Relationship already exists."
+            },
+            "get_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Get relationship list successful.",
+                "relationship": []
+            },
+            "update_success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Update relationship successful.",
+                "relationship": {
+                    "requester": 0,
+                    "recipient": 0,
+                    "status": ""
+                }
+            },
+            "status_none": {
+                "success": false,
+                "status_code": 400,
+                "message": "Update relationship failed. Status parameter must be provided.."
+            },
+            "status_invalid": {
+                "success": false,
+                "status_code": 400,
+                "message": "Update relationship failed. Status parameter is invalid."
+            },
+            "user_invalid": {
+                "success": false,
+                "status_code": 400,
+                "message": "Create relationship failed. Requester and recipient must be set and be valid user IDs."
+            }
+        },
+        "filter": {
+            "success": {
+                "success": true,
+                "status_code": 200,
+                "message": "Get filter successful.",
+                "filter": {}
+            }
+        },
+        "test": {
+            "test": {
+                "status_code": 200,
+                "message": "This is a test response."
+            }
+        },
+        "admin": {
+            "ping": {
+                "status_code": 200,
+                "message": "API is up and running.",
+                "uptime": 0,
+                "ip": {
+                    "client": "",
+                    "server": ""
+                }
+            }
+        }
+    }
+}

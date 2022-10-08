@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="FilterHeading" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorFilterHeadingText</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:background">@color/colorFilterHeadingBackGround</item>
+    </style>
+
+    <style name="FilmTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorFilmTitle</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="SubHeading" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorSubHeading</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

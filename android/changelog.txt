@@ -1,0 +1,6 @@
+- Removed unnecessary button fields from UserFragment
+- Created UserSearchFragment
+- UserSearchFragment is displayed by clicking button on UserFragment
+- Corrected TAGs in some fragments
+- Updated user class to take username and email parameters
+- Created new User constructor that initialises User class from API JSON response.

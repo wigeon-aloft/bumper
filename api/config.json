@@ -1,0 +1,14 @@
+{
+    "db": {
+        "host": "localhost",
+        "username": "hamster",
+        "password": "Untoward.Tomorrow.Ass883",
+        "database": "hamster"
+    },
+    "response_handler": {
+        "filepath": "response/response.json"
+    },
+    "omdb": {
+        "apikey": "7bf35645"
+    }
+}
